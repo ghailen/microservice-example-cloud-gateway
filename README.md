@@ -6,6 +6,34 @@ Port to use:
 
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/a601986a-4bd4-446a-be13-3855eca9bad0)
 
+
+-The limit microservice:
+
+Here we created a microservice limit: 
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/3457f3fc-7458-42db-861b-3051b7f25796)
+
+which connect to a configuration microservice to get the propertie limits-service.minmum and  limits-service.maximum
+we created a configuration class to read the two property: the way we used is to pass by @ConfigurationProperties("limits-service") annotation , then put the minimum and maxiumum as attribute in class to access directely to limits-service.minmum and  limits-service.maximum
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/aa381a9a-c14d-441c-967f-a6a16b79a658)
+ and we created a contrtoller to read them:
+ ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/16eb3f65-ca58-4e6d-a13c-c1f372c9d32a)
+
+api: http://localhost:8080/limits 
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/f1a67218-e8c6-4d1b-8b70-c619ce4c7ab4)
+
+
+-The configuration microservice:
+we will create the microservice which contains the confguration
+we need to add the annotation : @EnableConfigServer
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/d914181f-2cbf-49aa-b1d7-17e136c9c067)
+
+here we putted in the screen shot below: spring.cloud.config.server.git.uri=file:///F:/projectsmicroservice2023/git-localconfig-repo  which is a local repo that contains the properties files.
+we need to create it by : 
+git init
+git add.
+git commit -m "first commit"
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/7e8f37a3-382e-4303-960d-572a37810f3d)
+
 now let s use multiple environnement configuration dev,qa,prod,
 add file for each environnement:
 

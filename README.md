@@ -96,9 +96,23 @@ here we can see that the environement is with port 8001
 
 => now we can know which instance of application is called
 
+lets make the data stored in a h2 in memory database:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/4c20d2ba-b2e2-48ca-8935-a7fe8b96526c)
 
+the url : http://localhost:8000/h2-console/
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/157d6405-7ffd-4bb2-b0cf-e33961bbe3eb)
 
+in order to create the table in the db , we need to add the annotation @Entity and @Id to the entity 
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/6ced933c-f911-435d-aa12-5786959b4908)
 
+in database the camel case will be with format x_y for example: CurrencyExchange will be currency_exchange ,  conversionMultiple will be conversion_multiple
 
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/26edc493-69a4-4753-8fbf-157cd87de2cc)
 
+let s insert some data, so we create an sql file named data.sql in resources folder:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/e83ccfab-22ce-46ee-9080-134f57df363d)
+
+each time the application executed, the data.sql file will be exxecuted and the data will be inserted in the databse
+in the database:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/f0d209e3-0300-4dd1-9bee-938ae0457d9d)
 

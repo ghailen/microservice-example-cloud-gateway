@@ -116,3 +116,28 @@ each time the application executed, the data.sql file will be exxecuted and the 
 in the database:
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/f0d209e3-0300-4dd1-9bee-938ae0457d9d)
 
+
+Lets create now the Currency conversion microservice:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ac7a1b2d-45c2-42ce-90a9-75019f17f7bf)
+
+the created api : 
+http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/548e825d-7077-42aa-8d75-6af356cb60b7)
+
+now let s see how to call currency exchange microserice from currency conversion microservice:
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/f68b2143-39d4-48e8-8747-2f8e49f4481d)
+
+
+image now if we have multiple micorservice which communicates with each other so we need to create each time a rest template call, the solution is that spring cloud offer framework named Feinwhich can facilitate the communication betwee microservces.
+
+so you need to add foein dependancies:
+<dependency>
+		 <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+
+  then we need to create a proxy interface to allow the communication
+  
+  
+

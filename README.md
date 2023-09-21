@@ -137,7 +137,53 @@ so you need to add foein dependancies:
     <artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 
-  then we need to create a proxy interface to allow the communication
+  then we need to create a proxy interface to allow the communication:
+and add new annotation in interface named @FeignClietns and put two parameters name and host:
+this is the name of the micorservice currency exchange which exist in spring.application.name and the url of the microservice (only the host) as second parameter
   
+  ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/3773ce73-bddc-47dc-a5b9-a155ae51cc57)
+
+  -in the main class a new annotation miust be added:
+  @EnableFeignClients
+  ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/e225db1c-b96c-4554-8683-a9ca55eefde6)
+
+  now lets create new api for the fein (we kept the example of the rest template)
+  api feign example : http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quantity/10
+  ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/1719231c-dd6d-492b-9945-3985da162e9d)
+
+  ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/55020007-7230-43cb-994a-3400ea92a0e9)
+
+now the url in the proxy config is hard coded so we need to find a solution to make it dynamcally (use the instance dynamically) : => use the naming server or the registration service
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/eb4ce5ab-f50a-4a0c-8132-07d9f0e78224)
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/d86191d5-9024-4708-ba46-19f48f31120b)
+
+we will use eureka: 
+so we created a new microservice named naming-server
+and we add the dependalcy eureka netflix,
+and in class main we added the annotation @EnableEurekaServer
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/322980cf-4ef7-47cd-8536-710e22df2226)
+
+now we need to not register the microservice eureka to it self so we need to add a property in the application.properties:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/1c1af787-2096-4650-8826-c8380789341f)
+
+
+let s run it : in port : 8761 and as we can see here there is no instance running
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/b6625ea2-9ed7-4a68-baf0-f375da19808c)
+
   
+now let s connect the miroservice to the naming server:
+what we need to do is to add dependancy: 
+
+in the pom files of the microservice:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/5e84843f-94ad-4517-82f6-73ad96e282df)
+and add in application.prop in the two microservices: 
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/fab6a2f6-7685-45fe-97c3-444e4de80264)
+
+=> after rerunning the both microservices: we see the two instance created and up
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/1c96a9ca-ce87-44a3-80ed-9bd7467d233b)
+
+and next we need to make the currency conversion talk to currency exchange through the naming server
+
+
 

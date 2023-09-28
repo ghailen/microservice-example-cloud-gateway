@@ -186,5 +186,16 @@ and add in application.prop in the two microservices:
 and next we need to make the currency conversion talk to currency exchange through the naming server
 
 
+now we gonna do the load balancing:
+// this is the name of the micorservice currency exchange which exist in spring.application.name and the url of the microservice (only the host) as second parameter
+//@FeignClient(name="currency-exchange",url="localhost:8000")  // by deleting the url , the loadbalancing will work (no specific url for exchange)
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/4fb5d88c-aabf-463c-a760-49e7cf3e4aeb)
+
+we need to delete the url, so now after api rest call the request will be balanced by the loadbalancer based on naming-server
+
+if we call now the api from currency conversion, and we lanch two instance of applciation on port 8100 and 8101 every time we call the api the load balancer will work and move betweent the two instance
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/916997b5-2024-476c-a56d-d1ad5acce7b3)
 
 

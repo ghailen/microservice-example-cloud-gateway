@@ -245,9 +245,17 @@ The headers is added here:
 
 
 
+Now lets customize routes from the currency-exchange and currency-conversion:
+first we need to delete from application properties the discovery locator:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/b1761d67-9587-4fcd-b8dd-97116f442ebf)
 
+now in the configuration class of route:
+every time you call /currency/exchange/** go find the service name currency-exchange in eureka server (by using : lb://currency-exchange syntaxe)
 
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/7544a0bd-ebc2-46dd-9461-c6dbb693eeda)
 
+the new url will be : http://localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10   without the service name
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/3e02c240-fb01-4b94-b7aa-b8befea113d6)
 
 
 

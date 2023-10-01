@@ -281,5 +281,21 @@ Spring cloud gateway definiton:
 
 
 
+Circuit breaker : resilience4j
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/6ed1fae5-211f-4925-a107-653598476492)
+
+before java 8 they are using netflix hystrix now its preferefed to use resilience4j
+lets add resilience4j dependancy and spring aop in currency exchange microservice:
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/dd2a4c84-485d-442b-9182-23d4a23755a4)
+
+the lets create an api :
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/d20af8e5-0608-4fa1-9ffb-a4e9448a8fc0)
+
+http://localhost:8000/sample-api
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ea70dc8f-0409-4bfe-a145-21f5648af13e)
+
+
+
 
 

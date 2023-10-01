@@ -198,4 +198,6 @@ if we call now the api from currency conversion, and we lanch two instance of ap
 
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/916997b5-2024-476c-a56d-d1ad5acce7b3)
 
+Now let s create the spring cloud gateway:
+
 

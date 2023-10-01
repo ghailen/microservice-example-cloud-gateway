@@ -252,10 +252,34 @@ first we need to delete from application properties the discovery locator:
 now in the configuration class of route:
 every time you call /currency/exchange/** go find the service name currency-exchange in eureka server (by using : lb://currency-exchange syntaxe)
 
-![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/7544a0bd-ebc2-46dd-9461-c6dbb693eeda)
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/a18630d1-9d1c-444f-9762-b0ba1e962c26)
 
 the new url will be : http://localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10   without the service name
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/3e02c240-fb01-4b94-b7aa-b8befea113d6)
+
+http://localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/fe8d7c94-dc36-4e85-9e79-c9142a45712f)
+
+so we can also add a redirection for example we can redirect currency-conversion-new to currency-conversion-feign using filters:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/b75bc13e-7195-4a45-a9c4-24ec4fdf72b0)
+
+now this url will work also; http://localhost:8765/currency-conversion-new/from/USD/to/INR/quantity/10
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/347f69e3-2ea2-4a1f-aee6-fd89b834fbde)
+
+Now lets add new filtes configuration : here we need to add log for every call request
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/da83953a-e497-47ac-94db-84a6cdcd7ae1)
+
+now each api call we gonna log the called path of API:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/6e165c05-dfac-4fc8-a96c-6c1b56972287)
+
+
+Spring cloud gateway definiton:
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/a37aeeeb-2c49-49c1-93ef-3b5dd9846c06)
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/0455aca4-e880-4c69-bcac-d7f1b7b94929)
+
+
 
 
 

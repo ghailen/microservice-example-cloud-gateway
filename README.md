@@ -199,5 +199,30 @@ if we call now the api from currency conversion, and we lanch two instance of ap
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/916997b5-2024-476c-a56d-d1ad5acce7b3)
 
 Now let s create the spring cloud gateway:
+this dependancies is needed:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/67164d9e-b32c-4312-b171-bcfdcbe06371)
+
+application.properties file: the project will run in port 8765
+and lets connect the api gateway to eurika
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/466312e2-2579-4c5f-b00d-91cd74ad2aac)
+
+and as we can see the api gateway is up:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/802e6a70-2232-49d3-9d28-790d80403cd2)
+
+once the api gatway is up in port 8765 and registed in eureka, what we can do is to acces to the url of currecncy exchange (http://localhost:8000/currency-exchange/from/USD/to/INR) passing by api gateway (using the applicatin name):
+this is an example :
+we need first to enable the discovery
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ff136ca2-1352-4cd7-9be0-ec235868c826)
+then we can use the uul : {api-gateway-url}/{name-of-Service}/{url-of-the-service}
+=> http://localhost:8765/CURRENCY-EXCHANGE/currency-exchange/from/USD/to/INR
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/05fedfa2-8c9d-4faf-8bbd-36416d580fdf)
+
+the url for currency conversion:
+http://localhost:8765/CURRENCY-CONVERSION/currency-conversion-feign/from/USD/to/INR/quantity/10
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/b1ed4bc7-8af9-44e5-bd3d-3faffca220db)
+
+
+
+
 
 

@@ -221,6 +221,31 @@ the url for currency conversion:
 http://localhost:8765/CURRENCY-CONVERSION/currency-conversion-feign/from/USD/to/INR/quantity/10
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/b1ed4bc7-8af9-44e5-bd3d-3faffca220db)
 
+the url works but only with service name upper case, we can fix that to support lower case bu aded 
+spring.cloud.gateway.discovery.locator.lowerCaseServiceId=true
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/58b357bb-0aee-4f93-afe3-00c231c573b7)
+so this url now worj:
+http://localhost:8765/currency-conversion/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+
+Now let s build custom routes:
+an example , we are creating the redirection when we call the path /get to a specific url: (we create a custom route using a configuration class )
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/37f250f3-546c-4137-923b-976ab1b8e93d)
+
+now if we call 
+http://localhost:8765/get
+the returned information about the new url: (the header, the path...)
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/10263e5b-ce28-4b05-bd22-7c47aaa0311c)  
+
+now we added some header using filters:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/420c17c7-e6af-40e7-bf80-97bd1f2fb74b)
+
+The headers is added here:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/29ea68ec-e1ac-4bcb-9b9e-a70b2a4343fd)
+
+
+
+
 
 
 

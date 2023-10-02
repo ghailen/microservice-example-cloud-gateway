@@ -295,6 +295,54 @@ the lets create an api :
 http://localhost:8000/sample-api
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ea70dc8f-0409-4bfe-a145-21f5648af13e)
 
+let s talk about a feature of a circuit breaker called retry: 
+first let s create a fail, 
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/8eda7a1b-0715-42cb-9df4-c429c7299789)
+
+=> the api fail :
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/d7f45e68-6f11-4fa2-a04f-9352197b90dd)
+
+we need to add an annotation called @Retry in the call api to retry the call, we added default in the retry parameter and its the default value (its will retry 3 times example):
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/eaf977d8-814b-400f-a284-a0e1bfb0485a)
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/731bee80-00c7-4c83-af98-9d93ded15cbc)
+
+we can configure the retries number by adding an attribute in the application.properties
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/6989fdf5-f1d0-4b75-9ac7-b16de4ddd769)
+
+and change the value from defautl to sample-api:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/c4619efa-955d-406c-a096-c1afa7d1cb92)
+
+we can add a fall back response in roder to customize the return:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/a835507f-a9c9-4ae1-9c21-9f9caf653aa4)
+
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/41c296f0-c610-4b03-9114-f7933e83a376)
+
+
+now lets talk about circuit breaker:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/424c92aa-c7e1-407c-9cb6-2faa5ed58b0b)
+let s suppos that we gonna call the api 2000 times, the result will be the fallback response without calling the method of api, because when the microservice is down , the it said , hey this microsercice calls everything is failing then , why do i ,need to really call it and add load to it,
+why can't return a default response back directly? so this what circuit breaker does , it will break the cricuit and it will directly return a response back.
+
+The states of circuit breaker:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/29b323ee-ae13-40af-a4fb-3638da25669d)
+
+
+-rateLimiter: it will allow for example for 10 secondes only 1000 calls to the sample api
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/61a90a31-7450-4592-bbe4-5610ee4de352)
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/3e9a23f2-77c8-4eab-9cba-358d6ff58415)
+
+the first call and the second call will work, the third will fail:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/f15ffc32-faa1-472b-bf9e-6313438df99e)
+
+-Bulkhead:
+allow only maximum of 100 concurrent calls
+resilience4j.bulkhead.instances.sample-api.maxConcurrentCalls=10
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/10a314c2-1fc3-4c43-961c-47630ca4cd32)
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/98e150d6-8166-46d9-8b4a-5ac8fac37f92)
 
 
 

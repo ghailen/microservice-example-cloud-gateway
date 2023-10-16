@@ -92,5 +92,56 @@ the solution is using docker: one OS which is the host os
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/91419c5f-f509-4929-90ed-2a0eb9447efa)
 
 
+docker images command will show:
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/7822732d-4a5e-482c-a0ee-6a4b6b3958c0)
+
+we can give one tag ,multiple tag to one image :
+using to add new tag : docker tag  ....
+
+ ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/c9ce9890-8033-457e-abd4-337ad6761b65)
+
+now if we see docker images: another tag latest is added with the same image id
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/0809eaf7-7a91-442d-ae5e-9c7b10f05832)
+=> it s not an automatically things , its manually 
+
+if we run command docker pull mysql for example without specifying the version it will download the latest tag:
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/a424257e-33e6-4887-bb51-6afe6548aef5)
+
+ps :latest tag could not be the latest
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/56201a7c-2090-4fef-bba5-607d96b644f1)
+
+docker pull will download the image from the registry to your local, it does not run it, if you want to run it use docker run
+docker run will run the image , if the image does not exist in local, it will download it to local and create a container/
+
+mysql image consider like an official image, to know that you can use the command : docker search mysql
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/3ff49072-5359-4e22-b711-7e68c5f0dd42)
+[OK]it means that its official
+
+we can also check a history of an image: using docker image history {image id}
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/951e7430-92db-4571-b267-7effa50a2251)
+
+ ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/90a103cb-fa4f-4d30-866f-198072b01ea1)
+
+here we can see the steps involved in creating that specific image, for examle we can see 99.4MB it s concern the layer added of  java JDK
+========================================
+
+docker image inspect [image id} command 
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/591325e2-6c17-4b30-9824-1ec3ee8ee720)
+
+you can see the tags, date of creation, comment,digests,the config,the exposed ports, environnement variables...
+===========================================
+ the command docker image remove {image id} 
+ will remove the image from your local:
+
+ ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/93ae499c-dd8a-47d3-bc78-adda832ff064)
+
+
 
 

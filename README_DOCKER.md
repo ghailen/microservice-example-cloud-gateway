@@ -142,6 +142,65 @@ you can see the tags, date of creation, comment,digests,the config,the exposed p
 
  ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/93ae499c-dd8a-47d3-bc78-adda832ff064)
 
+===========================================================================================================================================
+Now let s talk about commands related to containers:
+the docker run is a shortcut for docker container run
 
 
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/8f4e4022-3227-49f1-bafb-175d2eb8ddf3)
+
+you can pause or unpause a container:
+docker container pause {id of container}
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/c0c7e69a-aed0-4dab-9aa7-a87b7dd988f1)
+
+=> its paused,so we can t get the response back
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/edce476d-a5c4-4657-88bf-8263afc8a146)
+
+docker container unpause {id of container}
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/0e8d9d9b-102e-4052-b9ab-2311c32b74d6)
+
+=> it s unpaused, we get the response back
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/b3b5f499-958e-432c-b3c3-315d0c17c5fd)
+
+docker container inspect : to get all informations and configs and details about the container (states,volumes...)
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/110c617b-0de2-428a-9422-69e4f16a5a5e)
+
+docker contaner ls -a will show the status of images and images
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/d4c3ad9b-ca86-4147-aea0-52f61ec3ab2c)
+
+docker container prune : will remove all stopped containes.
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/5db16a1b-38cf-4450-a609-0ec2a0170d84)
+
+docker container stop {id}
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/b6eced02-4ca0-4e6e-95f1-a67ec830bf5d)
+
+it will stop the container , and the container will be shutdown gatefully, it will close znd stop resource one by one, close the connecion to database
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/34e81d68-fe43-485d-9d91-5a0d3de1b35d)
+
+docker container kill {id}
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/2dd78e29-bc5d-4a54-86c9-06e337cf5f3d)
+
+this will imediattly stops the container, it will not shutdown one by one/
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/1d655c1c-330a-4755-a902-93d1782b1ae5)
+
+Note: for Stopping -> SIGTERM
+      For killing -> SIGKILL
+      ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ef506d74-3006-445c-87fa-c5f6fb1064e5)
+
+=> use docker container stop
+
+======================
+now let s come back to todo-rest-api-h2 application , and add to the parameters --restart=always , its called a restart policy
+There is restart=no (the default one) and restart=always
+ every time we restart the docker dekstop the container will be started
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/2a25b4c8-595b-4117-b580-1917327c7800)
+
+=> that s mean when we restart the docker desktop , the container will be automatically starter 
+
+to stop the container, juste put : docker container stop {id}
+and docker container prune to delete stopped container.
+if the docker desktop is restard , the container will be started
 

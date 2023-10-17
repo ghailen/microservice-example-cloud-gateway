@@ -204,3 +204,32 @@ to stop the container, juste put : docker container stop {id}
 and docker container prune to delete stopped container.
 if the docker desktop is restard , the container will be started
 
+
+docker events :
+for example if we execute docker events , then in another tab we do docker container ls -a , then docker container stop {id}
+and we back to the tab of the command  docker events we will see many events:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ea49d12f-5790-41e3-84e0-e13581eacc31)
+
+
+docker top {id}
+what is the top process running in the container
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/3df62c4d-ee6f-435c-b1d9-20d62ab1e288)
+
+docker stats : will show all the stats regarding the containers which are running:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/fd7d55ed-1283-4e59-8e7e-1f210ea6d518)
+
+
+docker un -p 5001:5000 -m 512 --cpu-quota -d ...
+will make the container use at a maximum 512 meg of memory
+and cpu 5000 thats mean 5% of cpu
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ac523711-c6aa-43f7-9ad4-29bd9e6a507f)
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/0eea096b-3c7c-4b73-846b-4487b7a715ae)
+
+docker system df : it helps us to look at all the different things that your Docker daemon manages
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/86eea7b4-8dca-4b0b-ba56-1f6aa9ed2c61)
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/d27d663b-8db0-4e33-b849-9c3e7d245ec1)
+

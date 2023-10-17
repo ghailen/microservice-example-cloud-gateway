@@ -229,7 +229,25 @@ and cpu 5000 thats mean 5% of cpu
 
 docker system df : it helps us to look at all the different things that your Docker daemon manages
 
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/5bc6a1ce-60c2-4f93-92a4-8b4658c3d432)
+
+
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/86eea7b4-8dca-4b0b-ba56-1f6aa9ed2c61)
 
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/d27d663b-8db0-4e33-b849-9c3e7d245ec1)
+
+
+========================================================================================
+Distributed Tracing
+=========================================================================================
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/c8270046-4be3-4ac3-b802-e23bdb2f5119)
+
+All the mircoservices will write and connect to a single distributed tracing server and this distributed tracing server would store everything to a database
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/408cfe42-280f-410b-b0c7-453cebab2b5f)
+
+=> Zipkin is a distributed tracing server , we will be launcching it as a docker container and we will be connecting all our microservices to this specific  zipkin server
+
+
+======================Launching Zipkin Container using Docker=====================
 

@@ -299,4 +299,19 @@ let s configure the sampler which help us to make a percentage of request to tra
 
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/a90ea25a-671d-4f26-b735-471da560dd41)
 
+now let s run the project : 
+and call the api of currency excnahge :
+http://localhost:8000/currency-exchange/from/USD/to/INR
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ee3fb887-03a6-403e-be9c-e6b2990f4562)
 
+then we open zipkin interface to find the trace (query):
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/e619dd75-1c4a-4bd8-b530-d302ea854ef7)
+
+let s add logs to the controller:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/26399758-bbac-4bbf-a173-309a82ca46be)
+
+we call tha api again multiple time:
+and we will see this : 
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/eaf0fa28-9e0a-48ee-b48b-8615d6786ea4)
+
+there is a unique Id per request

@@ -250,4 +250,13 @@ All the mircoservices will write and connect to a single distributed tracing ser
 
 
 ======================Launching Zipkin Container using Docker=====================
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/778358b9-1d59-4f8a-b840-02c108bf4e5a)
+
+let s run it as a container, we will pull it from the hub docker  :
+docker run -p 9411:9411 openzipkin/zipkin:2.23
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/475ddbaa-b190-438f-8f83-add51023e570)
+
+and now it is running in : 
+http://127.0.0.1:9411/zipkin/
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/650924df-66ca-4f52-a85f-d81e0bee3aeb)
 

@@ -315,3 +315,12 @@ and we will see this :
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/eaf0fa28-9e0a-48ee-b48b-8615d6786ea4)
 
 there is a unique Id per request
+
+now let s add sleuth rabit mq and sleuth zipkin dependancys into the other microserfice, currency conversion and api gateway:
+an call too many time url of thoses microservices
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/3597f206-a3e1-44d1-98bf-da73489cb471)
+
+
+
+

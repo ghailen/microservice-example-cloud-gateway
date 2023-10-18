@@ -260,3 +260,43 @@ and now it is running in :
 http://127.0.0.1:9411/zipkin/
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/650924df-66ca-4f52-a85f-d81e0bee3aeb)
 
+
+now let s connect Currency Exchange Microservice with Zipkin:
+
+first we need to add a dependancy called :
+<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-sleuth</artifactId>
+		</dependency>
+
+sleuth provide the possibility to send a request using a specific id, it will sent to the tracing server, give as the possiblity to trace request of multiple microservices
+
+also we need to add sleuth zipkin
+	<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-sleuth-zipkin</artifactId>
+		</dependency>
+
+  this depenancy we will add it later
+		<dependency>
+			<groupId>org.springframework.amqp</groupId>
+			<artifactId>spring-rabbit</artifactId>
+		</dependency>
+
+this is the schema of applications
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/427ec231-46dc-4b38-b8c5-49b3ada058ff)
+let s suppose that the tracing server is down , what we can do ? we will lost the logs
+the solution is to use a queue manager (rabbit mq)
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/d595668d-80db-45f0-a1d0-503bbe923bf6)
+
+so all microservices will send informations to Rabbit MQ and the distributed tracing server will pick up the information from the rabbit mq.
+
+The rabbit mq part will be later.
+
+let s now work with the old example:
+let s configure the sampler which help us to make a percentage of request to trace.
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/a90ea25a-671d-4f26-b735-471da560dd41)
+
+

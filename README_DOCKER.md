@@ -321,6 +321,7 @@ an call too many time url of thoses microservices
 
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/3597f206-a3e1-44d1-98bf-da73489cb471)
 
-
+if we open a query for api gateway, we can found the full hiearchie of the calls: it calls currency conversoion and currency exchange
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/41c2f243-fce6-430a-a5d7-b62b22f452de)
 
 

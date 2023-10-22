@@ -337,9 +337,39 @@ pullPolicy is by defaut ALL, for our case we will add IF_NOT_PRESENT: thats mean
 now let s build the docker image: using this command : spring-boot:build-image -DskipTests
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/bce04127-d209-4baf-bd6c-ca835856d8db)
 
-![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ca60746f-8dbd-4657-80c9-2a5cd639ba82)
-
-![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/2f92e7b7-bdbb-404b-bf5e-5039a224ece9)
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/46088e66-7f9a-427b-8285-6d7b68c9dfbd)
 
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/597624f4-bde7-48d7-b92c-4314750fc464)
 
+=> Successfully built image 'docker.io/ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT'
+now the image is created
+let s run it : docker run -p 8000:8000 ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/513269cf-9cfe-4e9e-9eac-bf4a6360b8ef)
+
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/9283a065-363d-4079-926d-bb5d446dcb09)
+
+we will get too manny errors in log because ereuka and zipkin are down
+
+lets test the api now :  http://localhost:8000/currency-exchange/from/USD/to/INR
+=> the image is up and we can call the api
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/75e16ac4-a6f4-40cc-9621-1d2951f63384)
+
+so it will take some time to do the same work to all the instructions for each microservice (api gateway,eureka...)
+so that why there is a too lcalled Docker compose, you will ned to configure a YAML file and with a single command , you can lanch up all the services which are defined inside the YAML file.
+The docker compose is already included as part of those dekspot installs ,so you don t need to install it in our case.
+to know the version : docker-compose --version
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/4dfcb8b0-7357-42c7-b893-15c8e8faf696)
+
+now let s create in the microservices folder a new docker-compose.YAML file 
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/cd31cf8e-0fd3-4e45-9b0c-2177e2b6c116)
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/155f91ab-5833-42fb-ad76-580c916709b2)
+
+you must point to the path where the docker-compose.yaml exist then use : "docker-compose up" command
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/2f3fa1c6-450d-4f84-b5d1-a14346001457)
+
+now the application is up we need to re call the api to check:
+ http://localhost:8000/currency-exchange/from/USD/to/INR
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/9b24d2b7-4ffe-4274-886c-2f2e9ab3385e)

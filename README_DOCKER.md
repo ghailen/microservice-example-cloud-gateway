@@ -409,11 +409,6 @@ we can check it in eureka server:
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/3463c84d-ee08-412b-8743-291066628ab1)
 
 
-
-API-gateway: ghailene/mmv2-api-gatway:0.0.1-SNAPSHOT
-![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ad7317f6-06c7-497f-bbec-c60171dadb74)
-
-
 Currency-conversion: ghailene/mmv2-currency-conversion-service:0.0.1-SNAPSHOT
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/257dcb0f-0527-4ae2-99d7-b045bec54d70)
 
@@ -431,3 +426,18 @@ but this one will not work: http://localhost:8100/currency-conversion/from/USD/t
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/32b2cea5-ae7b-4856-9633-b1120c0d6dce)
 
 
+API-gateway: ghailene/mmv2-api-gatway:0.0.1-SNAPSHOT
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ad7317f6-06c7-497f-bbec-c60171dadb74)
+
+add the configuration to the yaml file:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/fb462eca-553e-4fe0-a2b1-dbe5e0c3ba6d)
+
+let s check eureka if all good, and as we can see the api gateway is regsitred in eureka:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/d7f987d6-76b7-4c39-a8ae-29231202ff83)
+
+let s check the two urls: http://localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10
+ and http://localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+ ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/4617439a-229e-414d-8838-aca42a933558)
+
+ => all is good 

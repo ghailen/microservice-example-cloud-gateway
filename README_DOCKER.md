@@ -373,3 +373,11 @@ you must point to the path where the docker-compose.yaml exist then use : "docke
 now the application is up we need to re call the api to check:
  http://localhost:8000/currency-exchange/from/USD/to/INR
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/9b24d2b7-4ffe-4274-886c-2f2e9ab3385e)
+
+ now it s better to create a network, (not use the defaut network) the associate the service to the network
+ ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/1a11e5e3-c924-4846-b08f-97c5dfdba114)
+
+and rerun "docker-compose up"
+as we can see the network is created
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/af170744-1d62-453a-991d-5cf291e4fe62)
+

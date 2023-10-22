@@ -341,5 +341,5 @@ now let s build the docker image: using this command : spring-boot:build-image -
 
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/2f92e7b7-bdbb-404b-bf5e-5039a224ece9)
 
-![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/5cad0777-1768-4497-b9dd-994df20a18e6)
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/6ab0b419-8a84-41dd-8fe2-4ade9cda608d)
 

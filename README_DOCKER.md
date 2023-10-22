@@ -441,3 +441,5 @@ let s check the two urls: http://localhost:8765/currency-conversion-feign/from/U
  ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/4617439a-229e-414d-8838-aca42a933558)
 
  => all is good 
+
+ 

@@ -382,8 +382,6 @@ as we can see the network is created
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/af170744-1d62-453a-991d-5cf291e4fe62)
 
 now let s do the same things to all the microservices:
-API-gateway: ghailene/mmv2-api-gatway:0.0.1-SNAPSHOT
-![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ad7317f6-06c7-497f-bbec-c60171dadb74)
 
 Eureka-server: docker.io/ghailene/mmv2-naming-server:0.0.1-SNAPSHOT
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/9d21a240-a594-4824-b6da-1e3eb089a9d0)
@@ -409,4 +407,27 @@ and now as you can see the currency exchange microservices is registred to the e
 
 we can check it in eureka server:
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/3463c84d-ee08-412b-8743-291066628ab1)
+
+
+
+API-gateway: ghailene/mmv2-api-gatway:0.0.1-SNAPSHOT
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ad7317f6-06c7-497f-bbec-c60171dadb74)
+
+
+Currency-conversion: ghailene/mmv2-currency-conversion-service:0.0.1-SNAPSHOT
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/257dcb0f-0527-4ae2-99d7-b045bec54d70)
+
+lets add the microservice to the yaml file config:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/98fc7f7e-867c-4ec8-9372-20a71f775663)
+
+then in the console run , docker-compose up , again
+adn as we can see in eureka server, the currency conversion is up and registred in eureka:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/5ee568cd-812d-4e10-b562-7227cf1fd478)
+
+then this url will work: http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quantity/10
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/c793bc56-85ac-4fd9-87af-7797e6f448b6)
+
+but this one will not work: http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10  because it use a hardcoded url of localhost:8000 , so we need to use variable in conf yaml if we want to resolver that.   for example it will be http://currency-exchange/....
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/32b2cea5-ae7b-4856-9633-b1120c0d6dce)
+
 

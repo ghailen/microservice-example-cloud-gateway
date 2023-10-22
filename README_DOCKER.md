@@ -324,4 +324,22 @@ an call too many time url of thoses microservices
 if we open a query for api gateway, we can found the full hiearchie of the calls: it calls currency conversoion and currency exchange
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/41c2f243-fce6-430a-a5d7-b62b22f452de)
 
+we can specify in microservie the url of zipkin : 
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/e3287284-3d30-4311-9f83-9b2db72c3617)
+
+=========================================================Creating container image for microservices=============================================
+now we need need to add a configuration in maven pluging in the pom file:
+the dockerId: ghailene is not necessary to found it in docker , you can put any value
+the we add the name ...
+pullPolicy is by defaut ALL, for our case we will add IF_NOT_PRESENT: thats mean only if the images are not present locally, go and pull them,otherwise use the image which are present locally.
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/c40be192-4c95-408c-8cef-3b51e85e5c1e)
+
+now let s build the docker image: using this command : spring-boot:build-image -DskipTests
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/bce04127-d209-4baf-bd6c-ca835856d8db)
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ca60746f-8dbd-4657-80c9-2a5cd639ba82)
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/2f92e7b7-bdbb-404b-bf5e-5039a224ece9)
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/5cad0777-1768-4497-b9dd-994df20a18e6)
 

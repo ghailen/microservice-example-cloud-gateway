@@ -381,3 +381,32 @@ and rerun "docker-compose up"
 as we can see the network is created
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/af170744-1d62-453a-991d-5cf291e4fe62)
 
+now let s do the same things to all the microservices:
+API-gateway: ghailene/mmv2-api-gatway:0.0.1-SNAPSHOT
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ad7317f6-06c7-497f-bbec-c60171dadb74)
+
+Eureka-server: docker.io/ghailene/mmv2-naming-server:0.0.1-SNAPSHOT
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/9d21a240-a594-4824-b6da-1e3eb089a9d0)
+
+
+here we added the naming-server configuration in yaml file: and we added the attribute depends_on , in the currency-exchange because it depends on the eureka naming server
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/afd08480-9a6b-40ea-aeb7-ac718a0295fc)
+
+
+when we make the eureka server (naming-server up) when the microservice currency exchange try to connect to eureka server , we will get an error, because we can t call localhost:
+even if the eureka is up in localhost:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/68c92f90-bcc8-454a-9280-b9775a67d9bf)
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/8712ff64-b5e2-4b1a-a6f6-3cfc10088703)
+
+the solution is to add an environnement variable to the yaml file in the currency exchange conf:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/e63c2ced-c1ee-432d-be18-82c52942c65b)
+
+put it in the conf (uppercase): 
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/d08361f6-db69-4d24-9014-6825930d308b)
+and now as you can see the currency exchange microservices is registred to the eureka:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/78239727-5d45-441d-9559-57936db98a72)
+
+we can check it in eureka server:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/3463c84d-ee08-412b-8743-291066628ab1)
+

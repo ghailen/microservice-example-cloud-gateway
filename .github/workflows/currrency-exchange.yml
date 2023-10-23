@@ -39,7 +39,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWORD }}  
 
     - name: Login to Docker Hub
-      uses: mr-smithers-excellent/docket-build-push@v4      
+      uses: mr-smithers-excellent/docker-build-push@v4      
       with:
         image: ghailene/mmv2-${PROJECT_ARTIFACT_ID}:${PROJECT_VERSION}
         registry: docker.io

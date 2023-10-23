@@ -28,8 +28,8 @@ jobs:
 
     #- name: Run Tests
      # run: mvn -f currency-exchange-service/pom.xml test
-    - name: Build and Create Docker Image
-      run: mvn -f currency-exchange-service/ spring-boot:build-image -DskipTests  
+    #- name: Build and Create Docker Image
+     # run: mvn -f currency-exchange-service/ spring-boot:build-image -DskipTests  
       
       
     - name: Login to Docker Hub
@@ -45,7 +45,7 @@ jobs:
    #   run: docker build -t ghailene/mmv2-${PROJECT_ARTIFACT_ID}:${PROJECT_VERSION}
       
     - name: Push Docker image to Docker Hub
-      run: mvn docker:push
+      run: mvn clean package dockerfile:build dockerfile:push -Ddockerfile.repository=ghailene/mmv2-${PROJECT_ARTIFACT_ID}:${PROJECT_VERSION}
 
     #    docker logout
     - name: Log out from Docker Hub

@@ -45,7 +45,7 @@ jobs:
    #   run: docker build -t ghailene/mmv2-${PROJECT_ARTIFACT_ID}:${PROJECT_VERSION}
       
     - name: Push Docker image to Docker Hub
-      run: mvn clean package dockerfile:build dockerfile:push -Ddockerfile.repository=ghailene/mmv2-${PROJECT_ARTIFACT_ID}:${PROJECT_VERSION}
+      run: mvn -f currency-exchange-service/ clean package dockerfile:build dockerfile:push -Ddockerfile.repository=ghailene/mmv2-${PROJECT_ARTIFACT_ID}:${PROJECT_VERSION}
 
     #    docker logout
     - name: Log out from Docker Hub

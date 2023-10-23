@@ -478,3 +478,16 @@ check also zipkin and eureka if are up:
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/4c0af46e-046a-4f43-a9b0-603d2191d00d)
 
 
+==================================================================
+reminder:
+==================================================================
+-for the url :
+http://localhost:8000/currency-exchange/from/USD/to/INR
+http://localhost:8761/
+http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quantity/10
+http://127.0.0.1:9411/zipkin/?lookback=15m&endTs=1698071737534&limit=10
+http://localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+
+-for docker: docker-compose up  => in order to run all microservice, zipkin and rabbitmq
+

@@ -32,7 +32,13 @@ jobs:
     - name: Login to Docker Hub
       uses: docker/login-action@v3
       with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        username: ${{ secrets.DOCKERHUB_PASSWORD }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}      
-
+    
+    - name: Push Docker image to Docker Hub
+      run: spring-boot:build-image -DskipTests
+    
+    - name: Log out from Docker Hub
+      run: docker logout
+    
 # Add additional steps here for deployment or other actions.

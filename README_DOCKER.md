@@ -459,4 +459,11 @@ let s move to the next schema where we gonna add the rabbitmq
 
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ca4d2761-0883-4a29-88dc-1112544e654c)
 
+we are already added the rabbit mq dependancy in projects.
+lets now add some config in docker compose:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/c9bf2d08-2f92-4038-b4e7-95a4d2378c29)
 
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ef1dafa2-7deb-4af0-841b-81cfade0f2a6)
+
+now we need just to recheck urls api and the eureka.

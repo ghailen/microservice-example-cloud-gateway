@@ -442,4 +442,21 @@ let s check the two urls: http://localhost:8765/currency-conversion-feign/from/U
 
  => all is good 
 
- 
+ now let s add zipkin to the docker compose file : also we add the url in the environement variable like this : SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/ 
+ ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/7131c8bf-4117-4336-9995-ff9aef347845)
+
+recheck all the api and the eureka , if all good.
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/1e52f0d2-0220-48f4-a630-d80e7dc214c6)
+
+now all is done with this schema:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/bb9754db-d48d-474c-8f68-6e0ebb570f84)
+
+
+================================
+
+let s move to the next schema where we gonna add the rabbitmq
+
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ca4d2761-0883-4a29-88dc-1112544e654c)
+
+

@@ -29,7 +29,7 @@ jobs:
     #- name: Run Tests
      # run: mvn -f currency-exchange-service/pom.xml test
     - name: Build and Create Docker Image
-      run: mvn currency-exchange-service/ spring-boot:build-image -DskipTests  
+      run: mvn -f currency-exchange-service/ spring-boot:build-image -DskipTests  
       
       
     - name: Login to Docker Hub

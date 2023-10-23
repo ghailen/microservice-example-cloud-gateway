@@ -37,13 +37,13 @@ jobs:
     
     - name: Push Docker image to Docker Hub
     #  run: mvn -f currency-exchange-service/ spring-boot:build-image -DskipTests
-       run: |
+        run: |
         mvn -f currency-exchange-service/ clean install -DskipTests
         IMAGE_NAME=ghailene/mmv2-${PROJECT_ARTIFACT_ID}:${PROJECT_VERSION}
         docker build -t $IMAGE_NAME
         docker push $IMAGE_NAME
     #    docker logout
     - name: Log out from Docker Hub
-      run: docker logout
+        run: docker logout
     
 # Add additional steps here for deployment or other actions.

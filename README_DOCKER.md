@@ -467,3 +467,14 @@ lets now add some config in docker compose:
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/ef1dafa2-7deb-4af0-841b-81cfade0f2a6)
 
 now we need just to recheck urls api and the eureka.
+
+if you got some error with zipkin what mention that the rabbitmq is down and connection is refused
+try this config: add restart alwyas in zipkin, and switch the version of rabbit mq to 3-management-alpine
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/d2289ec9-e17a-40d2-947c-561c4a88be5e)
+
+then check this url of rabbit mq: http://localhost:15672/
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/85c67b07-20cc-4cd4-aac4-89eeff263128)
+check also zipkin and eureka if are up:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/4c0af46e-046a-4f43-a9b0-603d2191d00d)
+
+

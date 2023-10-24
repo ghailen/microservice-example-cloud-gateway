@@ -31,3 +31,6 @@ then :
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/27d6b86f-dc7c-463e-9017-f1690665d100)
 
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/434991db-413e-44ce-8294-abb40e81e763)
+
+
+let s create a dokcerfile for each microservice, here for the currency-microservice:

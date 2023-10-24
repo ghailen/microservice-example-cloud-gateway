@@ -45,17 +45,20 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }} 
-    #- name: Build docker image
-    #  run: docker build -t ghailene/mmv2-currency-exchange-service .
-    #- name: Publish image to docker hub
-    #  run: docker push ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+    - name: Build docker image
+      run: docker build -t ghailene/mmv2-currency-exchange-service .
+    - name: Tag docker image
+      run: docker tag 0.0.1-SNAPSHOT ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+    - name: Publish image to docker hub
+      run: docker push ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
         
-    - name: Build and push
-      uses: docker/build-push-action@v5
-      with:
-        context: currency-exchange-service/ 
-        push: true
-        tags: ghailenem/ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+    #- name: Build and push
+    #  uses: docker/build-push-action@v5
+    #  with:
+     #   context: currency-exchange-service/ 
+    #    push: true
+     #   tags: docker.io/ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+
     #- name: Login to Docker Hub
     #  uses: mr-smithers-excellent/docker-build-push@v5      
      # with:

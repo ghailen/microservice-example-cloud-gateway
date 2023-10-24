@@ -13,7 +13,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-   
+    defaults:
+      run:
+        working-directory: ./currency-exchange-service
 
     steps:
     - uses: actions/checkout@v3
@@ -44,9 +46,18 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v5
       with:
+        #context: currency-exchange-service/
         push: true
         tags: ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
-           
+    #- name: Login to Docker Hub
+    #  uses: mr-smithers-excellent/docker-build-push@v5      
+     # with:
+     #   image: ghailene/mmv2-currency-exchange-service
+     #   tag: 0.0.1-SNAPSHOT
+      #  registry: docker.io
+      #  dockerfile: currency-exchange-service/Dockerfile
+      #  username: ${{ secrets.DOCKERHUB_USERNAME }}
+      #  password: ${{ secrets.DOCKERHUB_PASSWORD }}         
     
    # - name: Push Docker image to Docker Hub
     #  run: mvn -f currency-exchange-service/ clean install -DskipTests

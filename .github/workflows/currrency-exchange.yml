@@ -50,7 +50,7 @@ jobs:
         image: ghailene/mmv2-currency-exchange-service
         tags: 0.0.1-SNAPSHOT
         registry: docker.io
-        #dockerfile: Dockerfile.ci
+        dockerfile: Dockerfile.ci
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}         
     

@@ -36,7 +36,7 @@ public class CurrencyExchangeController {
         }
         String port = environment.getProperty("local.server.port");
         currencyExchange.setEnvironment(port);
-        logger.info("hahhahaheaaaheeaaaahheahahahahjrrahajaahaahahasalaaaa");
+        logger.info("hahhahaheaaaheeaaaahheahahahahjrrahajaahaahaheasalaaaa");
         return currencyExchange;
 
     }

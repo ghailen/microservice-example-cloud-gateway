@@ -52,9 +52,9 @@ jobs:
     - name: Check docker image
       run: docker images
     - name: Tag docker image
-      run: docker tag ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+      run: docker tag mmv2-currency-exchange-service:0.0.1-SNAPSHOT ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
     - name: Publish image to docker hub
-      run: sudo docker push ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+      run: docker push ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
         
     #- name: Build and push
     #  uses: docker/build-push-action@v5

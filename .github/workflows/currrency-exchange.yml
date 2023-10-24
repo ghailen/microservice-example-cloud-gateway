@@ -48,8 +48,8 @@ jobs:
     
     #- name: Login to docker hub
      # run: docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_PASSWORD}}
-    #- name: Build docker image
-    #  run: docker build -t ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT .
+    - name: Build docker image
+      run: docker build -t ghailene/mmv2-currency-exchange-service .
     #- name: Check docker image
     #  run: docker images
    # - name: Tag docker image
@@ -68,7 +68,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5      
       with:
         image: ghailene/mmv2-currency-exchange-service
-        tag: 0.0.1-SNAPSHOT
+        tags: 0.0.1-SNAPSHOT
         registry: docker.io
         dockerfile: currency-exchange-service/Dockerfile
         username: ${{ secrets.DOCKERHUB_USERNAME }}

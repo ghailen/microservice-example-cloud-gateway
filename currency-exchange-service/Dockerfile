@@ -1,4 +1,5 @@
 FROM openjdk:11
 EXPOSE 8000
-ADD target/currency-exchange-service-0.0.1-SNAPSHOT.jar currency-exchange-service-0.0.1-SNAPSHOT.jar
-ENTRYPOINT ["java","-jar","/currency-exchange-service-0.0.1-SNAPSHOT.jar"]
+ARG JAR_FILE=target/*.jar
+COPY ./target/currency-exchange-service-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]

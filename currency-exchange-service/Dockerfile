@@ -1,4 +1,4 @@
 FROM openjdk:11
 EXPOSE 8000
-ADD target/mmv2-currency-exchange-service:0.0.1-SNAPSHOT mmv2-currency-exchange-service:0.0.1-SNAPSHOT
-ENTRYPOINT ["java","-jar","/mmv2-currency-exchange-service:0.0.1-SNAPSHOT.jar"]
+ADD target/currency-exchange-service-0.0.1-SNAPSHOT.jar currency-exchange-service-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","/currency-exchange-service-0.0.1-SNAPSHOT.jar"]

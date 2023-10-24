@@ -34,6 +34,11 @@ jobs:
     #- name: Build and Create Docker Image
      # run: mvn -f currency-exchange-service/ spring-boot:build-image -DskipTests  
       
+     #    docker logout
+    - name: check current folder linux
+      run: ls -a 
+    - name: check current folder windows
+      run: ldir  
       
     - name: Login to Docker Hub
       uses: docker/login-action@v3

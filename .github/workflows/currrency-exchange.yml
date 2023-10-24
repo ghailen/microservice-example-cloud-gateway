@@ -45,16 +45,17 @@ jobs:
      # with:
      #   username: ${{ secrets.DOCKERHUB_USERNAME }}
      #   password: ${{ secrets.DOCKERHUB_PASSWORD }} 
-    - name: Login to docker hub
-      run: docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_PASSWORD}}
-    - name: Build docker image
-      run: docker build -t ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT .
-    - name: Check docker image
-      run: docker images
-    - name: Tag docker image
-      run: docker tag mmv2-currency-exchange-service:0.0.1-SNAPSHOT ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
-    - name: Publish image to docker hub
-      run: docker push ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+    
+    #- name: Login to docker hub
+     # run: docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_PASSWORD}}
+    #- name: Build docker image
+    #  run: docker build -t ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT .
+    #- name: Check docker image
+    #  run: docker images
+   # - name: Tag docker image
+    #  run: docker tag mmv2-currency-exchange-service:0.0.1-SNAPSHOT ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+    #- name: Publish image to docker hub
+    #  run: docker push ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
         
     #- name: Build and push
     #  uses: docker/build-push-action@v5
@@ -63,15 +64,15 @@ jobs:
     #    push: true
      #   tags: docker.io/ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
 
-    #- name: Login to Docker Hub
-    #  uses: mr-smithers-excellent/docker-build-push@v5      
-     # with:
-     #   image: ghailene/mmv2-currency-exchange-service
-     #   tag: 0.0.1-SNAPSHOT
-      #  registry: docker.io
-      #  dockerfile: currency-exchange-service/Dockerfile
-      #  username: ${{ secrets.DOCKERHUB_USERNAME }}
-      #  password: ${{ secrets.DOCKERHUB_PASSWORD }}         
+    - name: Login to Docker Hub
+      uses: mr-smithers-excellent/docker-build-push@v5      
+      with:
+        image: ghailene/mmv2-currency-exchange-service
+        tag: 0.0.1-SNAPSHOT
+        registry: docker.io
+        dockerfile: currency-exchange-service/Dockerfile
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}         
     
    # - name: Push Docker image to Docker Hub
     #  run: mvn -f currency-exchange-service/ clean install -DskipTests

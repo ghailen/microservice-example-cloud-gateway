@@ -48,7 +48,7 @@ jobs:
     - name: Build docker image
       run: docker build -t ghailene/mmv2-currency-exchange-service .
     - name: Tag docker image
-      run: docker tag 0.0.1-SNAPSHOT ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+      run: docker tag ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT ghailene/mmv2-currency-exchange-service:0.0.1-snapshot
     - name: Publish image to docker hub
       run: docker push ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
         

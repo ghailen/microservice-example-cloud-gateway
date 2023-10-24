@@ -48,6 +48,7 @@ jobs:
       uses: docker/build-push-action@v5
       with:
         context: .
+        dockerfile: currency-exchange-service/Dockerfile  # Specify the path to your Dockerfile
         push: true
         tags: ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
     #- name: Login to Docker Hub

@@ -47,7 +47,7 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v5
       with:
-        #context: currency-exchange-service/
+        context: .
         push: true
         tags: ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
     #- name: Login to Docker Hub

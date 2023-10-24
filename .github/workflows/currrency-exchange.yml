@@ -44,8 +44,8 @@ jobs:
         image: ghailene/mmv2-currency-exchange-service
         tag: 0.0.1-SNAPSHOT
         registry: docker.io
-        dockerfile_directory: currency-exchange-service
-        dockerfile_name: dockerfile-exchange.yml
+        dockerfile_directory: ${{ github.workspace }}/currency-exchange-service
+        dockerfile_name: dockerfile
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}         
     

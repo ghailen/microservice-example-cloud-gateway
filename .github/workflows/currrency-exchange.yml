@@ -13,9 +13,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./currency-exchange-service
+
 
     steps:
     - uses: actions/checkout@v3
@@ -48,9 +46,9 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5      
       with:
         image: ghailene/mmv2-currency-exchange-service
-        tag: 0.0.1-SNAPSHOT
+        tags: 0.0.1-SNAPSHOT
         registry: docker.io
-        dockerfile: currency-exchange-service/Dockerfile
+        dockerfile: Dockerfile
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}         
     

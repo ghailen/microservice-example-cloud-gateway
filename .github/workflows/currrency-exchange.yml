@@ -48,9 +48,9 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v4      
       with:
         image: ghailene/mmv2-currency-exchange-service
-        tag: 0.0.1-SNAPSHOT
+        tags: 0.0.1-SNAPSHOT
         registry: docker.io
-        dockerfile: Dockerfile
+        #dockerfile: Dockerfile.ci
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}         
     

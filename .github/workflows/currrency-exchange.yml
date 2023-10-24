@@ -53,7 +53,7 @@ jobs:
     - name: Check docker image
       run: docker images
     - name: Tag docker image
-      run: docker ghailenem/tag mmv2-currency-exchange-service:0.0.1-SNAPSHOT ghailenem/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+      run: docker tag ghailenem/mmv2-currency-exchange-service:0.0.1-SNAPSHOT ghailenem/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
     - name: Publish image to docker hub
       run: docker push ghailenem/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
         

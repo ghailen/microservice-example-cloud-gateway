@@ -87,4 +87,11 @@ and change ghailene by ghailenebm in the docker compose file:
 let s run with : docker-compose up 
 and check all the urls : of microservices and rabitmq, zipkin and eureka
 
+now for each job i will create a workflow (job file)
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/dab975d1-d55b-492b-9df4-2f396add4bf6)
 
+and every push or pull request in a module or microservice the concerned job will be triggred.
+here i pushed in every microservice a code, so 4 jobs are triggred.
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/e6aec7b5-fb52-4e81-b38a-3ab14b6295ab)
+and a new image foreach module touched is created and pushed to the hub:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/55eebc78-8f6f-46bc-ad2e-5fb05066f87a)

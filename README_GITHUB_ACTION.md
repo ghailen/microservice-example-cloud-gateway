@@ -80,10 +80,12 @@ and in the hub the image is pushed:
 now the target now is to generate for each microservice a docker file to build it, and rename in all the pom file maven plugin ghailene by ghailenem to facilitate after the push of the local image , or the pull from the hub to the log to run the image locally.
 
 now we generated here new local himages for all microservcies:
-![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/5c1d4c3a-aff9-4e12-9e95-d186c5ab9cdd)
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/3b8f6374-2f95-433a-b81c-47ab1c82f864)
+
 lets delete the old local image which begin with ghailene/
 and change ghailene by ghailenem in the docker compose file:
-![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/0c255813-1f8f-4d92-a2f5-83bcfcecf0c4)
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/08ac1bad-ebc4-4650-84e0-1e42a710e762)
+
 let s run with : docker-compose up 
 and check all the urls : of microservices and rabitmq, zipkin and eureka
 

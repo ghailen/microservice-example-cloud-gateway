@@ -84,4 +84,7 @@ now we generated here new local himages for all microservcies:
 lets delete the old local image which begin with ghailene/
 and change ghailene by ghailenebm in the docker compose file:
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/0c255813-1f8f-4d92-a2f5-83bcfcecf0c4)
+let s run with : docker-compose up 
+and check all the urls : of microservices and rabitmq, zipkin and eureka
+
 

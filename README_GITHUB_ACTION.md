@@ -1,5 +1,5 @@
 
-
+================================== every screen shot contains ghailenebm replace it by ghailenem : its fixed in the code , it was a mistake in the screen shot =================
 To authenticate Docker Hub in a GitHub Actions workflow using an access token, you can follow these steps:
 
     Generate a Docker Hub access token:
@@ -51,7 +51,7 @@ spring-boot:build-image -DskipTests
 
 the name in our local in docker will be like that: 
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/4f0fd9ad-21f8-4960-a999-2889de4732ac)
-Here we have a problem when we need to push the local image to hub because in my account the username is ghailenebm not ghailene, so when pushing we gonna get an error message: access denied
+Here we have a problem when we need to push the local image to hub because in my account the username is ghailenem not ghailene, so when pushing we gonna get an error message: access denied
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/45aa844f-9eb8-4be4-bc50-488e85959afe)
 
 so to correct that we need to make the file name like that:
@@ -71,19 +71,21 @@ ghailene is the name of image
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/f50c12c3-b695-47bb-b363-401cc079a432)
 
 =========================
-Now we create a github action worflow to automate the build of the image and push it in docker hub, so we need to use the user name ghailenebm in our case , after running the job we will find the image in the hub
+Now we create a github action worflow to automate the build of the image and push it in docker hub, so we need to use the user name ghailenem in our case , after running the job we will find the image in the hub
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/67f97b29-3c27-49d3-bd1c-588321492f99)
 
 and in the hub the image is pushed:
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/3836f384-8a25-4298-abff-b2b6af8d2c4a)
 
-now the target now is to generate for each microservice a docker file to build it, and rename in all the pom file maven plugin ghailene by ghailenebm to facilitate after the push of the local image , or the pull from the hub to the log to run the image locally.
+now the target now is to generate for each microservice a docker file to build it, and rename in all the pom file maven plugin ghailene by ghailenem to facilitate after the push of the local image , or the pull from the hub to the log to run the image locally.
 
 now we generated here new local himages for all microservcies:
-![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/5c1d4c3a-aff9-4e12-9e95-d186c5ab9cdd)
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/3b8f6374-2f95-433a-b81c-47ab1c82f864)
+
 lets delete the old local image which begin with ghailene/
-and change ghailene by ghailenebm in the docker compose file:
-![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/0c255813-1f8f-4d92-a2f5-83bcfcecf0c4)
+and change ghailene by ghailenem in the docker compose file:
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/08ac1bad-ebc4-4650-84e0-1e42a710e762)
+
 let s run with : docker-compose up 
 and check all the urls : of microservices and rabitmq, zipkin and eureka
 

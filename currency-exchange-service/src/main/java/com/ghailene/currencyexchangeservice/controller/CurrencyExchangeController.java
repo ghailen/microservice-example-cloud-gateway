@@ -38,6 +38,5 @@ public class CurrencyExchangeController {
         currencyExchange.setEnvironment(port);
         logger.info("ghailene ben marzouk test when exvhange money");
         return currencyExchange;
-
     }
 }

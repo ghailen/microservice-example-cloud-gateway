@@ -36,13 +36,13 @@ jobs:
     - name: Login to docker hub
       run: docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_PASSWORD}}
     - name: Build docker image
-      run: docker build -t ghailenem/mmv2-currency-conversion-service:0.0.1-SNAPSHOT .
+      run: docker build -t ghailenebm/mmv2-currency-conversion-service:0.0.1-SNAPSHOT .
     - name: Check docker image
       run: docker images
     - name: Tag docker image
-      run: docker tag ghailenem/mmv2-currency-conversion-service:0.0.1-SNAPSHOT ghailenem/mmv2-currency-conversion-service:0.0.1-SNAPSHOT
+      run: docker tag ghailenebm/mmv2-currency-conversion-service:0.0.1-SNAPSHOT ghailenebm/mmv2-currency-conversion-service:0.0.1-SNAPSHOT
     - name: Publish image to docker hub
-      run: docker push ghailenem/mmv2-currency-conversion-service:0.0.1-SNAPSHOT
+      run: docker push ghailenebm/mmv2-currency-conversion-service:0.0.1-SNAPSHOT
         
     - name: Log out from Docker Hub
       run: docker logout

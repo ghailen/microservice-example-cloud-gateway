@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   currency-exchange:
-    image: ghailene/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+    image: ghailenebm/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
     mem_limit: 700m
     ports:
       - "8000:8000"
@@ -19,7 +19,7 @@ services:
       SPRING_ZIPKIN_SENDER_TYPE: rabbit
       
   currency-conversion:
-    image: ghailene/mmv2-currency-conversion-service:0.0.1-SNAPSHOT
+    image: ghailenebm/mmv2-currency-conversion-service:0.0.1-SNAPSHOT
     mem_limit: 700m
     ports:
       - "8100:8100"
@@ -36,7 +36,7 @@ services:
       SPRING_ZIPKIN_SENDER_TYPE: rabbit
       
   api-gatway:
-    image: ghailene/mmv2-api-gatway:0.0.1-SNAPSHOT
+    image: ghailenebm/mmv2-api-gatway:0.0.1-SNAPSHOT
     mem_limit: 700m
     ports:
       - "8765:8765"
@@ -53,7 +53,7 @@ services:
       SPRING_ZIPKIN_SENDER_TYPE: rabbit
       
   naming-server:
-    image: ghailene/mmv2-naming-server:0.0.1-SNAPSHOT
+    image: ghailenebm/mmv2-naming-server:0.0.1-SNAPSHOT
     mem_limit: 700m
     ports:
       - "8761:8761"

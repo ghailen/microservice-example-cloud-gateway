@@ -1,13 +1,13 @@
-name: Build and Test currency-exchange Maven Project
+name: Build and Test currency-conversion Maven Project
 
 on:
   push:
     paths:
-      - 'currency-exchange-service/**'  # Adjust this path to match the location of your project
+      - 'currency-conversion-service/**'  # Adjust this path to match the location of your project
     branches: [ "main" ]     
   pull_request:
     paths:
-      - 'currency-exchange-service/**'  # Adjust this path to match the location of your project
+      - 'currency-conversion-service/**'  # Adjust this path to match the location of your project
     branches: [ "main" ]    
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./currency-exchange-service
+        working-directory: ./currency-conversion-service
 
     steps:
     - name: Check out the repo
@@ -36,13 +36,13 @@ jobs:
     - name: Login to docker hub
       run: docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_PASSWORD}}
     - name: Build docker image
-      run: docker build -t ghailenem/mmv2-currency-exchange-service:0.0.1-SNAPSHOT .
+      run: docker build -t ghailenem/mmv2-currency-conversion-service:0.0.1-SNAPSHOT .
     - name: Check docker image
       run: docker images
     - name: Tag docker image
-      run: docker tag ghailenem/mmv2-currency-exchange-service:0.0.1-SNAPSHOT ghailenem/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+      run: docker tag ghailenem/mmv2-currency-conversion-service:0.0.1-SNAPSHOT ghailenem/mmv2-currency-conversion-service:0.0.1-SNAPSHOT
     - name: Publish image to docker hub
-      run: docker push ghailenem/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+      run: docker push ghailenem/mmv2-currency-conversion-service:0.0.1-SNAPSHOT
         
     - name: Log out from Docker Hub
       run: docker logout

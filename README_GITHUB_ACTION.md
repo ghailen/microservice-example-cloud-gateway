@@ -97,3 +97,13 @@ here i pushed in every microservice a code, so 4 jobs are triggred.
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/e6aec7b5-fb52-4e81-b38a-3ab14b6295ab)
 and a new image foreach module touched is created and pushed to the hub:
 ![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/55eebc78-8f6f-46bc-ad2e-5fb05066f87a)
+
+
+===========================
+Now lets pull the new images using the "docker-compose pull" command 
+![image](https://github.com/ghailen/microservice-example-cloud-gateway/assets/36199753/fb702656-fe0b-4582-8e8d-038276b9d71f)
+
+after updating the last images , let s run them with "docker-compose up" command
+
+
+

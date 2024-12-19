@@ -52,7 +52,7 @@ public class CurrencyConversionController {
     @GetMapping("/currency-conversion-feign/from/{from}/to/{to}/quantity/{quantity}")
     public CurrencyConversion calculateCurrencyConversionFeing(@PathVariable String from, @PathVariable String to,@PathVariable BigDecimal quantity){
              CurrencyConversion currencyConversion=  proxy.retreiveExchangeValue(from,to);
-
+        System.out.println("hello there");
         return new CurrencyConversion
                 (currencyConversion.getId(),
                         from,

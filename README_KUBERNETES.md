@@ -45,6 +45,59 @@ kubernates have something installed for each node to manage them .
 now let s connect our application to kubernates cluster, to use that we need to install too many things, but google cloud give as a tool to use the command line to do the connection, the name of tool is : Google Cloud Shell 
 ![image](https://github.com/user-attachments/assets/945abed5-4133-44e7-8623-cb073f7fea45)
 
+![image](https://github.com/user-attachments/assets/050c5003-90d3-4125-8bcb-07fc5ffb85bf)
+
+now what is the connect to the cluster command: 
+click on connect then copu the command in shell console
+![image](https://github.com/user-attachments/assets/2ee374a1-d278-4bba-a85f-736e2fcad803)
+
+![image](https://github.com/user-attachments/assets/e594eec4-c64f-4120-8dec-b7a0ea109b02)
+
+![image](https://github.com/user-attachments/assets/3236a07d-739e-4ad5-b1c1-383e31fea305)
+
+to run command inside ths cluser you need to ise command : kubectl (kube controller)   it used to interact with cluster
+its is automaticcaly installed in shell console 
+
+![image](https://github.com/user-attachments/assets/f72209a4-3467-4cb1-bbd7-6dd9beb67292)
+
+to deploy application: you need to use kubectl create deployment ... :
+![image](https://github.com/user-attachments/assets/ae04c17e-9290-4441-bc5b-d6473895541b)
+
+where image is the image of application in docker
+
+![image](https://github.com/user-attachments/assets/f7d53a76-866a-4f2b-b678-c77a62240484)
+![image](https://github.com/user-attachments/assets/6d3df507-590f-4323-93a6-e1e7d58056ac)
+
+![image](https://github.com/user-attachments/assets/2e665dfa-b122-4f70-8b3b-b47370eacfbf)
+![image](https://github.com/user-attachments/assets/85dc274d-a113-4df4-9de8-39104f85d32c)
+
+![image](https://github.com/user-attachments/assets/5723de3e-5fb5-41db-b46f-4943165760f1)
+
+now to expose the deployment to the world :
+exposed to port 8080 
+![image](https://github.com/user-attachments/assets/bc454eee-2d61-4bb6-876e-67c9b463172e)
+
+to check if the service is exposed well , you go to the interface then Services & ingress you will find the service:
+![image](https://github.com/user-attachments/assets/d1fcecf1-8277-4f8a-b86a-a67e9f931405)
+
+![image](https://github.com/user-attachments/assets/b5789cd5-4827-4250-873d-ffc12a50299f)
+
+if we enter to the endpoint:
+![image](https://github.com/user-attachments/assets/35205016-2dd1-40a9-be36-7f3456a3f6e3)
+
+![image](https://github.com/user-attachments/assets/ea269064-4204-424b-a038-acb21d94ef29)
+![image](https://github.com/user-attachments/assets/f66c92a0-b040-48ad-acb9-d63bb088194c)
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -41,6 +41,10 @@ node cluster details and nodes:
 
 kubernates have something installed for each node to manage them .
 
+==============================
+now let s connect our application to kubernates cluster, to use that we need to install too many things, but google cloud give as a tool to use the command line to do the connection, the name of tool is : Google Cloud Shell 
+![image](https://github.com/user-attachments/assets/945abed5-4133-44e7-8623-cb073f7fea45)
+
 
 
 

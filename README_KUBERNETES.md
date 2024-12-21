@@ -89,6 +89,61 @@ if we enter to the endpoint:
 ![image](https://github.com/user-attachments/assets/f66c92a0-b040-48ad-acb9-d63bb088194c)
 
 
+now let s see the detail how it is done : 
+
+![image](https://github.com/user-attachments/assets/f0a98cb6-db74-404f-bd63-a4e009ccb46c)
+let see the event happened:
+![image](https://github.com/user-attachments/assets/68834091-aa94-4031-8761-34acd0d0422d)
+
+pod is created, replicatSet , depmyment ,service.
+![image](https://github.com/user-attachments/assets/5ac14ee1-e2e4-4b8d-9e64-3e9ecf62767e)
+
+![image](https://github.com/user-attachments/assets/000fec43-6ca6-425f-b706-4b648d82af2d)
+
+![image](https://github.com/user-attachments/assets/f6a9d643-e3a0-4d31-8eea-05854082d7de)
+
+![image](https://github.com/user-attachments/assets/c650a734-2611-4bd9-b042-413563d1254b)
+
+kubernetes use signle responsiblityh principle , one concept one responsiblity 
+![image](https://github.com/user-attachments/assets/0e07c28a-f7fb-40e7-b510-4819acdf3db8)
+
+  ![image](https://github.com/user-attachments/assets/b9d198cc-5c57-4b35-9680-5ab29223182d)
+
+ ================understanding PODS====================
+![image](https://github.com/user-attachments/assets/c38bb152-f570-464c-9cc3-1e71265329b1)
+![image](https://github.com/user-attachments/assets/398c8908-5e92-4fc7-bd1b-f8d0d3f93fa3)
+we cannot create a container without pods , container lives inside a pod 
+
+![image](https://github.com/user-attachments/assets/3836cf44-ceee-4dac-91a0-f59ee884d1d6)
+each pod have a unique ip adress 
+a pod can actually contain multiple containers
+All the containers which are present in a  pod share resources. within the same pod 
+the containes can talk to each other using localhost.
+![image](https://github.com/user-attachments/assets/913af893-4688-4df7-865c-f12712a13fa3)
+![image](https://github.com/user-attachments/assets/31234717-3ed3-4777-bb44-0e555409bd15)
+a kubernates node can contain multiple pods and each of these prod can contain multiple containers  .
+There pods can be from different applications or these pords can be related to the same application.
+
+how to get description of a pod:
+![image](https://github.com/user-attachments/assets/a2dd347f-5220-4da8-a673-fa347be8fe3b)
+
+![image](https://github.com/user-attachments/assets/e15c4472-d225-4f95-abda-1e0c1686177e)
+
+a pod is runed in a namespace , these one is default : 
+![image](https://github.com/user-attachments/assets/38a2ba8a-3847-4548-9f70-8c8e71bb8cf0)
+how to separate the resources of DEV from the resources of QA?
+
+![image](https://github.com/user-attachments/assets/88e00d7e-cb08-42cc-9669-a7b380458244)
+
+![image](https://github.com/user-attachments/assets/49bc5aeb-664f-486b-a891-ecd36016e0e7)
+
+
+=====================understanding ReplicaSets================
+
+
+
+ 
+
 
 
 

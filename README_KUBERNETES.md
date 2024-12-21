@@ -139,10 +139,117 @@ how to separate the resources of DEV from the resources of QA?
 
 
 =====================understanding ReplicaSets================
+![image](https://github.com/user-attachments/assets/0b3563d7-6fb5-4fbf-a8e9-3bbec8f0b4c4)
 
+A replica sets ensure that a specific number of pods are running at all times.
 
+![image](https://github.com/user-attachments/assets/656f2951-0f65-4171-91fc-e2dc85093676)
 
+![image](https://github.com/user-attachments/assets/e456e770-432c-471d-bf6d-3ec75b23b0b9)
+
+ ![image](https://github.com/user-attachments/assets/ff34ffb2-c21f-431d-b2af-3834569a583d)
+
+ to delete the pod :
  
+![image](https://github.com/user-attachments/assets/e01c585d-e347-47bc-8053-cc667b9ab11b)
+
+when deleting the pord and wirte kuberctl get pods -o wide 
+we find that the pod is deleted , but there is another one appeared with another id 
+![image](https://github.com/user-attachments/assets/76eae5ef-e4b6-4852-bc58-59aef4c28d05)
+![image](https://github.com/user-attachments/assets/b38e3933-aceb-442f-9d94-5b98c66a1246)
+
+also the url is continue to work :
+![image](https://github.com/user-attachments/assets/4e647c7e-449c-4f22-b376-cc2191c62afa)
+
+![image](https://github.com/user-attachments/assets/d45a3c94-dfc9-4f03-804c-5333753e16c2)
+![image](https://github.com/user-attachments/assets/a834b402-6de8-45ec-9fe3-211601122c11)
+![image](https://github.com/user-attachments/assets/b94883d9-0574-456f-b4e1-b84a5a887309)
+
+![image](https://github.com/user-attachments/assets/3eadd688-f5b4-4154-b5fa-97af07593be4)
+
+![image](https://github.com/user-attachments/assets/d71c3f30-f714-4564-b47b-75b26568234d)
+
+![image](https://github.com/user-attachments/assets/fc2f15b0-9cb8-466d-8a31-1a3b2124e105)
+
+![image](https://github.com/user-attachments/assets/17a4b0bd-329c-42c2-8058-433a26147eeb)
+![image](https://github.com/user-attachments/assets/6fee8c64-5f89-4c47-9f29-7bd73ae7d973)
+![image](https://github.com/user-attachments/assets/ed89c06f-7b6e-4ad7-92b7-360fa4450ea4)
+![image](https://github.com/user-attachments/assets/a09f5f46-b83b-40e5-9f76-c2d4ab114c07)
+![image](https://github.com/user-attachments/assets/30c4d231-7481-4e64-8e1d-013c6b58fa7e)
+
+![image](https://github.com/user-attachments/assets/2516bc4e-8a3b-42f7-bf6f-7578c2be1c00)
+
+
+![image](https://github.com/user-attachments/assets/0b964173-efa5-470c-8aa6-86731c9ff2ce)
+
+![image](https://github.com/user-attachments/assets/c3dd0013-2ba1-4440-95fd-849229ef02eb)
+
+
+![image](https://github.com/user-attachments/assets/2d9dbcd6-212c-43c5-836e-799e5841c9f4)
+![image](https://github.com/user-attachments/assets/f5ea49a9-c1ad-425a-a1bb-c911a7d42711)
+
+![image](https://github.com/user-attachments/assets/20393efc-decb-4eb0-8b38-9f435a7ace76)
+
+![image](https://github.com/user-attachments/assets/8c444d5b-598d-4ea6-9c5a-73c15fc3d236)
+
+
+
+![image](https://github.com/user-attachments/assets/f211a052-3173-42ed-916a-411a44a9dfb6)
+
+
+![image](https://github.com/user-attachments/assets/a6c197f0-54ce-42bb-b86d-79f620096490)
+
+![image](https://github.com/user-attachments/assets/f1199aea-b093-47d7-b8f7-bc471c5ce7f9)
+
+![image](https://github.com/user-attachments/assets/4e485b36-349d-4a72-a1a0-577220ceb95a)
+
+we will see how it happes in background:
+
+![image](https://github.com/user-attachments/assets/7368430f-9516-4f94-b9f7-977bd160407a)
+
+we can see 3 replicat set in history (the first one is old 38 min ago and it was deleted in the example but the event command return all info)
+![image](https://github.com/user-attachments/assets/d9162aeb-764d-4783-a6c4-a4fc476ed8f4)
+
+![image](https://github.com/user-attachments/assets/44789ae6-52d3-47b2-ab61-74613ddf5b1b)
+
+
+![image](https://github.com/user-attachments/assets/83c89c4c-91d1-49b6-8e78-85849850d01a)
+
+explain command : 
+
+![image](https://github.com/user-attachments/assets/87f4477e-7f9d-4bc8-9c45-4a94a46ed8ee)
+
+![image](https://github.com/user-attachments/assets/45ff7ee6-611c-417d-b146-86bc18acec93)
+=> maintining the number of pods
+
+=========================Understanding deployment==============================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

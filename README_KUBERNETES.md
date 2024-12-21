@@ -225,6 +225,114 @@ explain command :
 =========================Understanding deployment==============================
 
 
+![image](https://github.com/user-attachments/assets/4a078baf-ef63-4a94-9bc5-388e02240be3)
+
+![image](https://github.com/user-attachments/assets/8676b44d-040c-4d3e-a8e9-19b9f3e28427)
+
+![image](https://github.com/user-attachments/assets/c19e911e-f672-4c52-9414-e93096954ef3)
+
+![image](https://github.com/user-attachments/assets/8f468351-cd73-4b3f-b42f-683ab202f2f5)
+
+![image](https://github.com/user-attachments/assets/2c7b3ca1-1e96-4fe2-a0b1-05d0a9546af2)
+
+![image](https://github.com/user-attachments/assets/6f830cec-d2d6-4af2-b273-024c78a5e409)
+
+![image](https://github.com/user-attachments/assets/e520c260-9a1b-4447-bb6a-32cb796c1169)
+
+![image](https://github.com/user-attachments/assets/5914f74a-857b-4d1a-85a3-654450ac5a94)
+
+![image](https://github.com/user-attachments/assets/80ea1f48-f9c7-45c3-8136-5886505c36a5)
+
+![image](https://github.com/user-attachments/assets/a683a398-e3a4-41f1-ac5a-1ac613ede6e4)
+
+![image](https://github.com/user-attachments/assets/cfc9f3c6-7db7-4238-85cc-6132c0c69d55)
+
+![image](https://github.com/user-attachments/assets/7615c458-3524-4f3f-999b-7c793452715a)
+
+![image](https://github.com/user-attachments/assets/a43ab78a-729d-472e-84d6-9663345bd13a)
+
+![image](https://github.com/user-attachments/assets/d9c15bee-72f7-4370-835e-8a352af95beb)
+
+![image](https://github.com/user-attachments/assets/30e741a2-826b-45c0-9fc0-8b535dba9fc6)
+
+it is in ready state because the image has an error
+
+![image](https://github.com/user-attachments/assets/a5af6503-bf7b-4361-8e0e-5a0f48d4507a)
+
+the new one created is has an invalid image name as the status 
+
+![image](https://github.com/user-attachments/assets/52f40f44-f05a-4353-b3b3-c440446ed5c7)
+
+![image](https://github.com/user-attachments/assets/f56161ee-ca51-451d-9ec5-a52e5520e2c7)
+
+
+when we youse get events we got this : 
+
+![image](https://github.com/user-attachments/assets/da5e424c-2042-4499-9981-fe4bb0cb2aae)
+
+
+nwo we have here a replcat set  1 of the application which have two pod instance instance 1 and 2 , (for our exmeple 3)
+![image](https://github.com/user-attachments/assets/e1316c8f-2a1c-4659-9d93-e7ab19f792ef)
+
+when we try to deploy new version a new replica set 2 of the application is created ,
+
+![image](https://github.com/user-attachments/assets/1cfad825-0627-400d-9ec0-7cf8de51ade6)
+![image](https://github.com/user-attachments/assets/f191ad76-6f73-4977-8dbe-d9be110ea8bd)
+![image](https://github.com/user-attachments/assets/bff36ae5-cec0-4b16-9d70-9d1bcdec0527)
+![image](https://github.com/user-attachments/assets/0b56d287-b380-4c87-aaf6-a9fe43500e68)
+
+lets create a pod with a proper image
+![image](https://github.com/user-attachments/assets/d71d2d62-0aad-47b1-a641-6814af41cd91)
+
+![image](https://github.com/user-attachments/assets/e913127d-cabf-490d-a9e6-bc70c195dd82)
+
+![image](https://github.com/user-attachments/assets/ed5907ad-f71e-451b-8618-a5fb01875404)
+
+![image](https://github.com/user-attachments/assets/bc2c6e41-f813-4845-879c-a0e2b557583b)
+
+![image](https://github.com/user-attachments/assets/bcf24789-6bef-4baa-a172-0aad31d9b9e6)
+
+![image](https://github.com/user-attachments/assets/c680f773-e22e-482e-b250-ac0e22ccb386)
+
+
+![image](https://github.com/user-attachments/assets/d91d202c-1935-4785-9085-0e17ddf82896)
+now let get events:
+
+![image](https://github.com/user-attachments/assets/a9ec6497-0f6f-4633-87fa-909bcb49dc88)
+
+![image](https://github.com/user-attachments/assets/9424573b-d4f7-4272-a80b-d2d5a83fd5e2)
+
+![image](https://github.com/user-attachments/assets/231c7dcb-3cfb-444b-8368-c0fc7ee0126d)
+
+![image](https://github.com/user-attachments/assets/a8651478-42cf-422a-953b-603e34ef0315)
+
+![image](https://github.com/user-attachments/assets/0ab6ca17-83ac-4790-af71-bffadc84a387)
+
+![image](https://github.com/user-attachments/assets/d285b14d-cf82-4fd2-a09c-9981b666ca61)
+
+![image](https://github.com/user-attachments/assets/61e3c5f5-0d7b-4b34-83cd-3961f9d8955c)
+
+![image](https://github.com/user-attachments/assets/9e1768f2-0268-483a-905c-50ed6a966fe4)
+
+![image](https://github.com/user-attachments/assets/274b849b-5d90-4fa3-9a73-264c712770e2)
+
+![image](https://github.com/user-attachments/assets/d525a1e7-f953-4d9f-8bab-b96646be4407)
+
+![image](https://github.com/user-attachments/assets/094957b4-0b56-4fc0-b8f2-6fe1d004bb0d)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
